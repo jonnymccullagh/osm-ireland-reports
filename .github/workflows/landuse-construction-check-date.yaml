@@ -113,13 +113,16 @@ jobs:
           source ./env/bin/activate
           pip install -r requirements.txt
           python landuse-construction-check-date.py > ./data/landuse-construction-check-date.json
-  
+          ls -al ./data
+          ls -al ~/.s3cfg
+
     - name: Copy artifacts to BackBlaze/S3 bucket
       env:
         S3_BUCKET: ${{ secrets.TILES_S3_BUCKET }}
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: |
+        ls -al ~/.s3cfg
         s3cmd ls s3://osmie-tiles
         echo "----"
         ls -alh ./reports
