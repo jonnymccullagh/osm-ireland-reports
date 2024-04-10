@@ -129,5 +129,6 @@ jobs:
         s3cmd ls s3://osmie-tiles
         echo "----"
         s3cmd put --force ./data/landuse-construction-check-date.json s3://osmie-tiles/reports/data/landuse-construction-check-date.json
+        s3cmd put --force ./cron.sh s3://osmie-tiles/reports/cron.sh
         s3cmd put --force ./web_files/index.html s3://osmie-tiles/reports/index.html
         s3cmd put --force ./web_files/landuse-construction-check-date.html s3://osmie-tiles/reports/landuse-construction-check-date.html

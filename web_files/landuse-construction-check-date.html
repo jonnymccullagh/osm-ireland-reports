@@ -58,18 +58,18 @@
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8">
         <h3>Description</h3>
-        <p>This map adds a marker icon to any 'ways' tagged as <code>landuse=construction</code>. Since the results are ways we use the centre point of the way for the marker.</p>
+        <p>This map adds a marker icon to any 'ways' tagged as <code>landuse=construction</code> with a <code>check_date</code> tag earlier than the date when the report was <a href="https://github.com/jonnymccullagh/osm-ireland-reports/actions/workflows/landuse-construction-check-date.yaml">last generated</a>. Since the results are ways we use the centre point of the way for the marker.</p>
         <h3>Frequency</h3>
         <p>This map is re-generated every 3 days. To check the last time it was generated check the <a href="https://github.com/jonnymccullagh/osm-ireland-reports/actions/workflows/landuse-construction-check-date.yaml">Github pipeline.</a></p>
         <h3>Overpass Query</h3>
-        <code>
+        <pre>
             area["name"="Ireland"]->.boundaryarea;
             (
             way(area.boundaryarea)[landuse=construction];
             );
             out center;
-        </code>
-        <p>The code can be examined in full on <a href="https://github.com/jonnymccullagh/osm-ireland-reports/"></a>Github</a></p>
+        </pre>
+        <p>The code can be examined in full on <a href="https://github.com/jonnymccullagh/osm-ireland-reports/">Github</a></p>
         
       </div>
     </div>
