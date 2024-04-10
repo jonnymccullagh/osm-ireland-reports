@@ -35,7 +35,7 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Reports</a>
               <ul class="dropdown-menu" aria-labelledby="dropdown03">
-                <li><a class="dropdown-item" href="#">Landuse Construction</a></li>
+                <li><a class="dropdown-item" href="landuse-construction-check-date.html">Landuse Construction</a></li>
               </ul>
             </li>
           </ul>
@@ -60,7 +60,7 @@
         <h3>Description</h3>
         <p>This map adds a marker icon to any 'ways' tagged as <code>landuse=construction</code>. Since the results are ways we use the centre point of the way for the marker.</p>
         <h3>Frequency</h3>
-        <p>This map is re-generated every 3 days. </p>
+        <p>This map is re-generated every 3 days. To check the last time it was generated check the <a href="https://github.com/jonnymccullagh/osm-ireland-reports/actions/workflows/landuse-construction-check-date.yaml">Github pipeline.</a></p>
         <h3>Overpass Query</h3>
         <code>
             area["name"="Ireland"]->.boundaryarea;
@@ -69,7 +69,7 @@
             );
             out center;
         </code>
-        
+        <p>The code can be examined in full on <a href="https://github.com/jonnymccullagh/osm-ireland-reports/"></a>Github</a></p>
         
       </div>
     </div>
@@ -96,7 +96,7 @@
     <script src="https://cdn.maptiler.com/maptiler-sdk-js/v1.1.1/maptiler-sdk.umd.js"></script>
     <script src="https://cdn.maptiler.com/leaflet-maptilersdk/v1.0.0/leaflet-maptilersdk.js"></script>
     <script>
-var mapbox_url = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiam9ubnltY2N1bGxhZ2giLCJhIjoiY2xwZzBoa3VyMW40djJycXI4OGpsbmFqMSJ9.rr357zkxr89BjYdeFDPrDw';
+        var mapbox_url = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiam9ubnltY2N1bGxhZ2giLCJhIjoiY2xwZzBoa3VyMW40djJycXI4OGpsbmFqMSJ9.rr357zkxr89BjYdeFDPrDw';
         var mapbox_attribution = '© Mapbox © OpenStreetMap Contributors';
         var esri_url ='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
         var esri_attribution = '© Esri © OpenStreetMap Contributors';
